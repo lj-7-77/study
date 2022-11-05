@@ -4,13 +4,21 @@
 //
 //  Created by LJ on 2022/11/05.
 //
+typealias WattPerHour = Int
+typealias Watt = Int
 
-protocol someProtocol {
-    typealias WattPerHour = Int
-    typealias Watt = Int
-    
+protocol Chargeable {
     var maximumWattPerHour: WattPerHour { get }
     
     func convert(chargeableWattPerHour: WattPerHour) -> WattPerHour
 }
 
+extension Chargeable {
+    func convert(chargeableWattPerHour: WattPerHour) -> WattPerHour {
+        if maximumWattPerHour < chargeableWattPerHour {
+            return maximumWattPerHour
+        } else {
+            return chargeableWattPerHour
+        }
+    }
+}
