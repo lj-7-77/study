@@ -5,5 +5,5 @@
 //  Created by LJ on 2022/11/05.
 //
 
-typealias Int = WattPerHour
+
 

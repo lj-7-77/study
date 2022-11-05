@@ -9,7 +9,7 @@ protocol someProtocol {
     typealias WattPerHour = Int
     typealias Watt = Int
     
-    let maximemWattPerHour: WattPerHour
+    var maximumWattPerHour: WattPerHour { get }
     
     func convert(chargeableWattPerHour: WattPerHour) -> WattPerHour
 }
